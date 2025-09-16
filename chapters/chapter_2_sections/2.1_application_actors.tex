@@ -1,0 +1,81 @@
+\section{Application Actors}
+
+The Credix application is designed to serve a diverse set of users, each with distinct roles and interactions within the digital meal voucher ecosystem. Understanding these roles is crucial for defining the specific functional and non-functional requirements of the platform.
+
+\begin{itemize}
+    \item \textbf{End-User}
+    \begin{itemize}
+        \item \textbf{Role:} Utilizes the digital meal voucher for payments at participating vendors and manages their personal wallet.
+        \item \textbf{Responsibilities:}
+        \begin{itemize}
+            \item Viewing current digital wallet balance and available credit.
+            \item Generating unique, time-bound barcodes for payment.
+            \item Reviewing personal transaction history.
+            \item Confirming payments via biometric authentication (fingerprint/FaceID).
+        \end{itemize}
+        \item \textbf{Access:}
+        \begin{itemize}
+            \item Credix mobile application (Flutter).
+            \item Digital wallet interface.
+            \item Transaction history and payment generation features.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Vendor}
+    \begin{itemize}
+        \item \textbf{Role:} Accepts Credix payments from end-users via ASM POS terminals and manages their transaction settlements.
+        \item \textbf{Responsibilities:}
+        \begin{itemize}
+            \item Scanning end-user barcodes for payment processing.
+            \item Viewing real-time payment confirmations.
+            \item Accessing daily/weekly/monthly settlement reports.
+            \item Managing their business profile and payment settings.
+        \end{itemize}
+        \item \textbf{Access:}
+        \begin{itemize}
+            \item Vendor portal (web-based or integrated with POS).
+            \item Transaction processing interface.
+            \item Settlement and reporting dashboards.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Corporate Client}
+    \begin{itemize}
+        \item \textbf{Role:} Manages meal credit benefits for their employees, including purchasing, distribution, and policy enforcement.
+        \item \textbf{Responsibilities:}
+        \begin{itemize}
+            \item Bulk purchase of meal credit for their organization.
+            \item Allocation and distribution of credit to individual employees or departments.
+            \item Setting and adjusting spending limits and expiry dates for employee credits.
+            \item Monitoring employee credit usage and generating financial reports.
+            \item Managing employee accounts within their corporate structure.
+        \end{itemize}
+        \item \textbf{Access:}
+        \begin{itemize}
+            \item Dedicated corporate dashboard.
+            \item Credit purchase and distribution module.
+            \item Employee management and policy configuration tools.
+            \item Usage reports and analytics.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Administrator}
+    \begin{itemize}
+        \item \textbf{Role:} Oversees and configures the entire Credix platform, ensuring its smooth operation and security.
+        \item \textbf{Responsibilities:}
+        \begin{itemize}
+            \item Creation, modification, and logical deletion of user accounts (End-Users, Vendors, Corporates).
+            \item Assignment and revocation of roles (e.g., activating/deactivating corporate accounts, managing vendor access).
+            \item Monitoring system activity, including fraud detection and transaction anomalies.
+            \item Managing system configurations (e.g., payment thresholds for OTP, credit expiry rules).
+            \item Resolving disputes and handling support requests.
+        \end{itemize}
+        \item \textbf{Access:}
+        \begin{itemize}
+            \item Comprehensive administrative dashboard.
+            \item User and corporate account management modules.
+            \item System configuration and monitoring tools.
+            \item Fraud detection and alert systems.
+        \end{itemize}
+    \end{itemize}
+\end{itemize}

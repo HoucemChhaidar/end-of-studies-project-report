@@ -1,0 +1,56 @@
+\section{Functional Requirements}
+
+Functional requirements describe the set of services and interactions that the system must provide to satisfy the users of Credix. They are categorized along several major axes: user and account management, payment flow management, transaction and usage monitoring, notifications and alerts, wallet and balance management, and dashboard and reporting.
+
+\subsection{User and Account Management}
+\begin{itemize}
+    \item Creation, modification, and logical deletion of accounts (End-User, Vendor, Corporate, Administrator).
+    \item Secure authentication (email/password, JWT, token refresh, biometric authentication for End-Users).
+    \item Management of roles and permissions according to user type.
+    \item Corporate account creation, modification, and management.
+    \item Employee account management within corporate structures (addition, removal, status tracking).
+\end{itemize}
+
+\subsection{Payment Flow Management}
+\begin{itemize}
+    \item Generation of unique, time-bound (e.g., 30-second expiry) 1D barcodes (e.g., Code128 format) linked to the End-User's tokenized wallet ID.
+    \item Real-time validation of barcode payments by the Spring Boot backend upon scanning by ASM POS terminals.
+    \item Processing of payment transactions, including debiting the End-User's wallet and crediting the Vendor's account.
+    \item Implementation of fraud detection rules (e.g., >5 transactions/min from one user) to block suspicious payments.
+    \item Requirement of SMS One-Time Password (OTP) for payments exceeding a predefined threshold (e.g., 200 TND).
+\end{itemize}
+
+\subsection{Transaction and Usage Monitoring}
+\begin{itemize}
+    \item Recording and display of all payment transactions for End-Users (date, time, vendor, amount, status).
+    \item Tracking of credit allocation and usage for Corporate Clients (distributed amount, consumed amount, remaining balance).
+    \item Monitoring of payment settlements and transaction summaries for Vendors.
+    \item Real-time updates on transaction status (pending, completed, failed).
+\end{itemize}
+
+\subsection{Notifications and Alerts}
+\begin{itemize}
+    \item Instant push notifications for End-Users upon successful payment, credit updates, or security alerts.
+    \item Real-time alerts for Corporate Clients on credit depletion, suspicious activity, or policy violations.
+    \item Notifications for Vendors on successful payment receipt and daily settlement summaries.
+    \item System alerts for Administrators on fraud attempts, system errors, or critical events.
+\item Multi-language support for notifications (English, French, Arabic).
+\end{itemize}
+
+\subsection{Wallet and Balance Management}
+\begin{itemize}
+    \item Display of current digital wallet balance for End-Users.
+    \item Management of corporate credit pools, including bulk purchase and top-up functionalities.
+    \item Allocation and de-allocation of credit to individual employees by Corporate Clients.
+    \item Enforcement of corporate-defined spending limits (e.g., monthly limits, daily limits) and expiry settings.
+    \item Secure tokenization of wallet IDs for enhanced security.
+\end{itemize}
+
+\subsection{Dashboard and Reporting}
+\begin{itemize}
+    \item Graphical visualization of key metrics for Corporate Clients (e.g., credit consumption trends, employee spending patterns).
+    \item Generation of customizable reports for Corporate Clients (e.g., credit allocation reports, detailed usage reports) in PDF/CSV formats.
+    \item Vendor dashboard displaying daily transaction summaries, settlement status, and payment history.
+    \item Administrator dashboard for real-time system monitoring, fraud alerts, and user activity logs.
+    \item Dynamic filters for reports (e.g., period, user, vendor, transaction type).
+\end{itemize}

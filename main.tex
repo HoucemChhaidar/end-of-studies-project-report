@@ -1,0 +1,63 @@
+\documentclass[12pt,a4paper]{report}
+
+% Load all packages and configurations
+\input{packages}
+
+% Document metadata
+\title{End of Studies Project Report}
+\author{Houcem Chhaidar}
+\date{\today}
+
+% Enable minitoc functionality
+\dominitoc
+
+\begin{document}
+
+% --- Front Matter ---
+\pagenumbering{roman}
+\setcounter{page}{1}
+\pagestyle{empty}
+
+% Dedication
+\input{frontmatter/dedication}
+\clearpage
+
+% Acknowledgments
+\input{frontmatter/acknowledgments}
+\clearpage
+
+% Main Table of Contents
+\pagestyle{fancy}
+\tableofcontents
+\clearpage
+
+% List of figures
+\listoffigures
+\clearpage
+
+% List of tables
+\listoftables
+\clearpage
+
+% Abbreviations
+\input{frontmatter/abbreviations}
+\clearpage
+
+% --- Main Matter ---
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\pagestyle{fancy}
+
+% Chapters
+\input{chapters/general_introduction}
+\input{chapters/chapter_1}
+\input{chapters/chapter_2}
+\input{chapters/chapter_3}
+\input{chapters/chapter_4}
+\input{chapters/general_conclusion}
+
+
+% Webliography
+\input{chapters/webliography}
+
+\end{document}

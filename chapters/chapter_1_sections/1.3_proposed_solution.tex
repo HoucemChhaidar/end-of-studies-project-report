@@ -1,0 +1,74 @@
+\section{Proposed Solution}
+
+\subsection{General presentation of the solution}
+
+To address the identified needs and overcome the shortcomings of existing applications, we propose \textbf{Credix}, a comprehensive, modular, and scalable mobile application. It centralizes the management of digital meal vouchers, secure payments, corporate credit distribution, and real-time POS integration within a secure and ergonomic interface. Designed with Flutter for the front-end and Spring Boot for the back-end, Credix relies on a robust, continuously deployed architecture via CI/CD pipelines, ensuring rapid updates, reliability, and portability across Android and iOS platforms.
+
+\subsection{Key Solution Functions}
+
+Credix offers a suite of functionalities designed to revolutionize the meal voucher ecosystem for end-users, vendors, and corporate clients:
+
+\begin{itemize}
+    \item \textbf{Secure Wallet Management and Authentication:}
+    Credix ensures secure registration and authentication for end-users, vendors, and corporate administrators through an email/password module, biometric authentication (fingerprint/FaceID), and robust role-based access control. The system manages digital wallet balances, transaction history, and tokenized user identities for enhanced security.
+
+    \item \textbf{Barcode Payment and Real-time Validation:}
+    The Flutter mobile application generates unique, time-bound (e.g., 30-second expiry) 1D barcodes (e.g., Code128 format) linked to the user's tokenized wallet ID. These barcodes are scanned by ASM POS terminals, which send real-time validation requests to the Spring Boot backend via a REST API. This ensures instant payment processing and eliminates the need for physical cards or vouchers.
+
+    \item \textbf{Advanced Corporate Credit Management:}
+    A dedicated corporate dashboard allows businesses to purchase credit in bulk (e.g., 10,000 TND for 9,500 TND) via bank transfer. This credit can then be distributed to employees through flexible allocation rules (e.g., fixed monthly amounts, dynamic adjustments) and managed with corporate-defined spending limits and expiry settings.
+
+    \item \textbf{Robust Fraud Detection and Security:}
+    The backend implements an intelligent fraud detection engine that blocks suspicious patterns (e.g., more than 5 transactions per minute from a single user). For high-value payments (e.g., exceeding 200 TND), an SMS One-Time Password (OTP) is required for additional verification. Wallet IDs are replaced with short-lived JWT tokens, refreshed every 24 hours, to enhance security.
+
+    \item \textbf{Comprehensive Dashboards and Reporting:}
+    Credix provides intuitive dashboards tailored to each user role. End-users can view their balance and transaction history. Vendors access settlement reports and payment summaries. Corporate clients gain real-time insights into credit usage, employee spending, and fraud alerts through visual graphs and detailed reports. Push notifications are sent for payment confirmations, credit updates, and security alerts.
+
+    \item \textbf{Admin and Vendor Portals:}
+    A dedicated administrative interface allows for fraud monitoring, credit issuance, and dispute resolution. The vendor portal enables businesses to scan barcodes, process payments, view real-time settlements, and access comprehensive transaction reports, streamlining their operational workflow.
+\end{itemize}
+
+\begin{table}[!htbp]
+    \caption{Key Innovations of Credix Compared to Existing Solutions} 
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \label{tab:innovations_credix}
+    \begin{tabularx}{\textwidth}{|X|X|X|}
+        \hline
+        \textbf{Functionality} & \textbf{Existing Solutions} & \textbf{Credix (Our Project)} \\ 
+        \hline
+        Digital-First Payment (No Physical Vouchers/Cards) 
+        & \textcolor{orange}{\ding{70}} Partial (hybrid systems)
+        & \textcolor{green}{\ding{51}} Fully digital with mobile-first approach \\
+        \hline
+        Seamless ASM POS Integration
+        & \textcolor{red}{\ding{55}} No
+        & \textcolor{green}{\ding{51}} Native integration with real-time synchronization \\
+        \hline
+        Advanced Corporate Credit Controls
+        & \textcolor{orange}{\ding{70}} Basic controls
+        & \textcolor{green}{\ding{51}} Dynamic allocation with real-time monitoring \\
+        \hline
+        Real-time Transaction Processing
+        & \textcolor{orange}{\ding{70}} Limited (batch processing)
+        & \textcolor{green}{\ding{51}} Instant processing with immediate confirmation \\
+        \hline
+        Robust Security (Biometric, Tokenization, OTP)
+        & \textcolor{orange}{\ding{70}} Basic security measures
+        & \textcolor{green}{\ding{51}} Multi-layer security with biometric authentication \\
+        \hline
+        Intuitive User Experience
+        & \textcolor{red}{\ding{55}} Poor UX design
+        & \textcolor{green}{\ding{51}} Modern, user-centric interface design \\
+        \hline
+        Comprehensive Vendor Discovery
+        & \textcolor{orange}{\ding{70}} Limited vendor listings
+        & \textcolor{green}{\ding{51}} Enhanced location-based vendor discovery \\
+        \hline
+        Multi-Category Retail Support
+        & \textcolor{red}{\ding{55}} Restaurant-focused only
+        & \textcolor{green}{\ding{51}} All retail categories (markets, boutiques, pharmacies) \\
+        \hline
+    \end{tabularx}
+\end{table}
+The entirety of these functionalities, supported by a robust technical architecture and an automated DevOps process, offers a coherent, secure, and perfectly adapted user experience to the expectations of end-users, vendors, and professional corporate clients in the digital meal voucher ecosystem.

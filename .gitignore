@@ -1,0 +1,54 @@
+# LaTeX intermediate files
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.idx
+*.ilg
+*.ind
+*.lof
+*.lot
+*.out
+*.toc
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.ist
+*.fls
+*.log
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+
+# Multind / glossaries extra files
+*.maf
+*.mtc
+*.mtc0
+*.mtc1
+*.mtc2
+*.mtc3
+*.mtc4
+*.mtc5
+*.mtc6
+*.mtc7
+
+# Editors and IDEs
+*.swp
+*.bak
+*.tmp
+*.backup
+*.DS_Store
+*.vscode/
+*.idea/
+
+# Output files (PDFs, unless you want to version-control them)
+*.dvi
+*.xdv
+*.ps
+
+# Latexmk and other build directories
+latex.out/
+build/
