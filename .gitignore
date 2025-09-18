@@ -48,6 +48,7 @@
 *.dvi
 *.xdv
 *.ps
+*.pdf
 
 # Latexmk and other build directories
 latex.out/
