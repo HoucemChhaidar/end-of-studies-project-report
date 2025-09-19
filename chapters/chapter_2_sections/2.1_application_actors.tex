@@ -5,77 +5,62 @@ The Credix application is designed to serve a diverse set of users, each with di
 \begin{itemize}
     \item \textbf{End-User}
     \begin{itemize}
-        \item \textbf{Role:} Utilizes the digital meal voucher for payments at participating vendors and manages their personal wallet.
+        \item \textbf{Role:} Individual employees who utilize digital meal vouchers for payments at participating vendors and manage their personal wallet.
         \item \textbf{Responsibilities:}
         \begin{itemize}
             \item Viewing current digital wallet balance and available credit.
-            \item Generating unique, time-bound barcodes for payment.
-            \item Reviewing personal transaction history.
+            \item Generating unique, time-bound barcodes for payment transactions.
+            \item Reviewing personal transaction history and spending patterns.
             \item Confirming payments via biometric authentication (fingerprint/FaceID).
+            \item Managing personal account settings and preferences.
         \end{itemize}
         \item \textbf{Access:}
         \begin{itemize}
-            \item Credix mobile application (Flutter).
-            \item Digital wallet interface.
+            \item Credix mobile application (Flutter-based).
+            \item Digital wallet interface with real-time balance updates.
             \item Transaction history and payment generation features.
         \end{itemize}
     \end{itemize}
 
-    \item \textbf{Vendor}
+    \item \textbf{Corporate}
     \begin{itemize}
-        \item \textbf{Role:} Accepts Credix payments from end-users via ASM POS terminals and manages their transaction settlements.
+        \item \textbf{Role:} Corporate entities that manage meal credit benefits for their employees, including bulk purchasing, distribution, and comprehensive analytics.
         \item \textbf{Responsibilities:}
         \begin{itemize}
-            \item Scanning end-user barcodes for payment processing.
-            \item Viewing real-time payment confirmations.
-            \item Accessing daily/weekly/monthly settlement reports.
-            \item Managing their business profile and payment settings.
+            \item Purchasing bulk credit packages for organizational meal voucher programs.
+            \item Distributing credit across end users within their corporate structure.
+            \item Monitoring end user transactions and spending behaviors.
+            \item Viewing comprehensive spending analytics and usage patterns.
+            \item Generating detailed financial reports for budget management and compliance.
+            \item Setting spending policies and credit allocation rules.
         \end{itemize}
         \item \textbf{Access:}
         \begin{itemize}
-            \item Vendor portal (web-based or integrated with POS).
-            \item Transaction processing interface.
-            \item Settlement and reporting dashboards.
+            \item Corporate web dashboard (Angular-based interface).
+            \item Credit management and distribution modules.
+            \item Advanced analytics and reporting tools.
+            \item Employee account oversight and policy configuration.
         \end{itemize}
     \end{itemize}
 
-    \item \textbf{Corporate Client}
-    \begin{itemize}
-        \item \textbf{Role:} Manages meal credit benefits for their employees, including purchasing, distribution, and policy enforcement.
-        \item \textbf{Responsibilities:}
-        \begin{itemize}
-            \item Bulk purchase of meal credit for their organization.
-            \item Allocation and distribution of credit to individual employees or departments.
-            \item Setting and adjusting spending limits and expiry dates for employee credits.
-            \item Monitoring employee credit usage and generating financial reports.
-            \item Managing employee accounts within their corporate structure.
-        \end{itemize}
-        \item \textbf{Access:}
-        \begin{itemize}
-            \item Dedicated corporate dashboard.
-            \item Credit purchase and distribution module.
-            \item Employee management and policy configuration tools.
-            \item Usage reports and analytics.
-        \end{itemize}
-    \end{itemize}
-
-    \item \textbf{Administrator}
-    \begin{itemize}
-        \item \textbf{Role:} Oversees and configures the entire Credix platform, ensuring its smooth operation and security.
-        \item \textbf{Responsibilities:}
-        \begin{itemize}
-            \item Creation, modification, and logical deletion of user accounts (End-Users, Vendors, Corporates).
-            \item Assignment and revocation of roles (e.g., activating/deactivating corporate accounts, managing vendor access).
-            \item Monitoring system activity, including fraud detection and transaction anomalies.
-            \item Managing system configurations (e.g., payment thresholds for OTP, credit expiry rules).
-            \item Resolving disputes and handling support requests.
-        \end{itemize}
-        \item \textbf{Access:}
-        \begin{itemize}
-            \item Comprehensive administrative dashboard.
-            \item User and corporate account management modules.
-            \item System configuration and monitoring tools.
-            \item Fraud detection and alert systems.
-        \end{itemize}
-    \end{itemize}
+    % \item \textbf{Administrator}
+    % \begin{itemize}
+    %     \item \textbf{Role:} System administrators who oversee platform operations, user management, and system security across all Credix components.
+    %     \item \textbf{Responsibilities:}
+    %     \begin{itemize}
+    %         \item Managing user accounts across all actor types (creation, modification, deactivation).
+    %         \item Overseeing corporate bulk credit purchase approvals and validations.
+    %         \item Monitoring system performance, security, and transaction integrity.
+    %         \item Configuring system parameters and business rules.
+    %         \item Handling escalated support requests and dispute resolution.
+    %         \item Maintaining audit trails and compliance reporting.
+    %     \end{itemize}
+    %     \item \textbf{Access:}
+    %     \begin{itemize}
+    %         \item Comprehensive administrative dashboard with full system oversight.
+    %         \item User management and role assignment interfaces.
+    %         \item System monitoring and configuration tools.
+    %         \item Security and fraud detection systems.
+    %     \end{itemize}
+    % \end{itemize}
 \end{itemize}
